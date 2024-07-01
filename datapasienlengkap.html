@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data pasien</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js"></script>
+    <script>
+         function printPage() {
+            window.print();
+        }
+        
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('button-print').addEventListener('click', printPage);
+        });
+    </script>
+    <style>
+        .patient-card {
+            position: relative; /* Untuk posisi absolut nomor pasien */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
+            background: #00BCD4;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .patient-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background: #0097A7;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .patient-info {
+            text-align: left;
+            margin-left: 40px; /* Jarak untuk nomor */
+            flex-grow: 1; /* Agar mengambil ruang kosong */
+        }
+
+        .patient-status {
+            background: #00BCD4;
+            padding: 10px;
+            color: white;
+            width: 225px; /* Sesuaikan dengan lebar yang diinginkan */
+            margin: 0 auto; /* Menengah halaman */
+            margin-top: -10px;
+        }
+
+        .patient-status p {
+        margin: 0; /* Menghilangkan margin default pada <p> */
+        text-align: left; /* Pastikan teks rata kiri */
+        }
+
+        .patient-info p, .patient-status p {
+            margin: 5px 0; /* Konsisten margin antar paragraf */
+        }
+
+        .Tutup-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #00BCD4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .Tutup-button:hover {
+            background: #0097A7;
+        }
+
+        .scheduling-link {
+            display: block;
+            margin-top: 50px;
+            margin-left: 74px;
+            text-align: left;
+            color: #426c94;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Dashboard
+                    <i class="arrow-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <a href="dashboard.html">Home</a>
+                <a href="#" class="notification">
+                    <span>2</span>
+                    <img src="bell.png" alt="Notification Icon" class="bell-icon">
+                </a>
+                <img src="Profile.png" alt="User Icon" class="user-icon">
+            </div>
+        </div>
+    </header>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 20px;
+            }
+            .container {
+                background-color: white;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .patient-card {
+                background-color: #00a0e3;
+                color: white;
+                padding: 15px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+            }
+            .patient-image {
+                width: 60px;
+                height: 60px;
+                background-color: #333;
+                margin-right: 15px;
+            }
+            .patient-info {
+                flex-grow: 1;
+            }
+            .patient-name {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .button {
+                background-color: #00a0e3;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Data Pasien</h2>
+            </div>
+            <div class="patient-card">
+                <div class="patient-image"></div>
+                <div class="patient-info">
+                    <div class="patient-name"> Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Apriyana Prawira Sunadi</div>
+                    <div>No. Telp : 085797586745</div>
+                    <div>Alamat : Rungkut, Ajusan Bangkal</div>
+                    <div>usia :22 </div>
+                    <div>Keluahan : Panas, pusing, pilek</div>
+                    <div>Riwayat Penyakit : DBD</div>
+                    <div>Dokter Spesialis : Bedah Dalam </div>
+                    <div>Jadwal Perawatan : senin 01 juli 2024  </div>
+                    <div>Nama Dokter : Dr. Khalid basalamah</div>
+                </div>
+                </div>
+            </div>
+            <a href="dashboard.html"><button class="button">Tutup</button></a>
+            <button class="button" id="button-print">Print</button>
+        </div>
+    </body>
+    </html>
+</head>
+</body>
+    

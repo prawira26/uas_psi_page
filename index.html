@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit Karya Medika</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_admin.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Rumah Sakit Karya Medika</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#" id="pendaftaran-link">Pendaftaran</a></li>
+                </ul>
+            </nav>
+            <div class="login-button">
+                <a href="#" id="login-link">Login</a>
+                <div id="login-dropdown" class="dropdown-content">
+                    <a href="Login_Pasien.html" class="left">Pasien</a>
+                    <a href="#" class="right" id="admin-login-link">Admin</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>SELAMAT DATANG</h1>
+            <p>Sistem Pendaftaran Pasien di Rumah Sakit Karya Medika</p>
+            <button class="cta-button" id="ctabutton">Daftar Sekarang</button>
+        </div>
+    </section>
+    <section class="about">
+        <p>Tentang</p>
+        <p>
+            Rumah Sakit Karya Medika ini berdiri pada tahun 2011 pada bulan agustus, didirikan oleh Prof. Yusril Ilyas.
+            Rumah Sakit ini beroperasi di daerah Bandung Kota. Hingga sekarang rumah sakit ini aktif beroprasi dalam
+            pengobatan. Karya Medika juga aktif dalam berbagai macam acara sebagai media partner, contohnya seperti
+            acara Donor Darah Mahasiswa, Pelatihan Pertolongan Kesehatan yang dilakukan di kampus uninUs.
+            Rumah sakit Karya Medika memiliki alat yang canggih untuk pengobatan.
+        </p>
+    </section>
+    <footer>
+        <section class="Est">
+        <p>Est. 2024</p>
+        </section>
+    </footer>
+
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <p>Anda belum melakukan login pasien</p>
+            <p>Mohon login terlebih dahulu untuk melanjutkan pendaftaran</p>
+            <button class="ok-button">OK</button>
+        </div>
+    </div>
+
+    <!-- Admin Login Form -->
+    <div id="admin-login-form" class="modal">
+        <div class="modal-content">
+            <h3>Login Administrator</h3>
+            <form>
+                <label for="admin-username">Username/ID Admin</label>
+                <input type="text" id="admin-username" name="username">
+                <label for="admin-password">Password</label>
+                <input type="password" id="admin-password" name="password">
+                <button type="submit">Login</button>
+            </form>
+            <a href="#">Forgot Password</a>
+        </div>
+    </div>
+</body>
+</html>

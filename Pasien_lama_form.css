@@ -1,0 +1,200 @@
+/* Dashboard Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('Aset_gambar/Join\ US.jpg') ;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/*navbar*/
+
+.dashboard-header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10 8px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -145px; /* Adjust this value to move the dropdown menu to the left */
+    background-color: #00aaff; /* Match the login button background color */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 1100px;
+    padding: 3px 20px; /* Padding for top and bottom */
+    white-space: nowrap; /* Prevent wrapping */
+    border-radius: 100px;
+    margin-top: 0px;
+}
+
+.dropdown-content a {
+    color: white; /* Match the login button text color */
+    padding: 10px 20px; /* Adjust padding to match login button */
+    text-decoration: none;
+    display: inline-block; /* Display inline-block to allow side-by-side layout */
+    background-color: #00aaff;
+    border-radius: 100px; /* Match button shape */
+}
+
+.dropdown-content a:hover {
+    background-color: #008ccc; /* Slightly darker blue on hover */
+}
+
+.navbar .login-button:hover .dropdown-content {
+    display: flex; /* Display flex to align items horizontally */
+    gap: 10px; /* Add gap between items */
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section a {
+    margin-left: 35px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.notification {
+    position: relative;
+}
+
+.notification span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: rgb(243, 52, 52);
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14.2px;
+    display: none;
+}
+.notification span.show {
+    display: inline; /* Tampilkan ketika ada notifikasi */
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.bell-icon {
+    width: 24px; /* Sesuaikan ukuran yang diinginkan */
+    height: 24px;
+}
+
+.show {
+    display: flex; /* Display flex to align items horizontally */
+    gap: 10px; /* Add gap between items */
+}
+
+.border-data {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+}
+
+.title {
+    text-align: left;
+}
+
+.border-data {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px; /* Ubah ini agar lebih fleksibel dalam penempatan */
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; /* Ensure buttons are spaced apart */
+    gap: 20px; /* Add space between the buttons */
+    margin-top: 20px; /* Add margin to the top of the button container */
+}
+
+.btn-kembali, .btn-daftarlagi {
+    background-color: #008ccc;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.border-keluhan {
+    display: none; /* Sembunyikan border-keluhan secara default */
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 320px;
+    margin: 20px; /* Ubah ini agar lebih fleksibel dalam penempatan */
+    background-color: #f9f9f9;
+    text-align: left;
+    margin-left: 400px;
+    position: absolute;
+    margin-top: -408px;
+}
+
+.input-keluhan {
+    width: 300px; /* Atur lebar input */
+            height: 40px; /* Atur tinggi input */
+            font-size: 16px; /* Atur ukuran font */
+            padding: 8px; /* Atur padding di dalam input */
+            border-radius: 5px; /* Atur border-radius untuk sudut yang lebih lembut */
+            border: 1px solid #ccc; /* Atur border untuk tampilan garis tepi */
+}
+
+.btn-daftar {
+    background-color: #008ccc;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+
+.btn-konfirmasi {
+    background-color: #008ccc;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: -100px;
+    margin-top: 20px;
+    position: absolute;
+}

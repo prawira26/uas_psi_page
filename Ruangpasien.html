@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruangan</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js"></script>
+</head>
+<body>
+    <style>
+        .patient-card {
+            position: relative; /* Untuk posisi absolut nomor pasien */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
+            background: #00BCD4;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .patient-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background: #0097A7;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .patient-info {
+            text-align: left;
+            margin-left: 40px; /* Jarak untuk nomor */
+            flex-grow: 1; /* Agar mengambil ruang kosong */
+        }
+
+        .patient-status {
+            background: #00BCD4;
+            padding: 10px;
+            color: white;
+            width: 225px; /* Sesuaikan dengan lebar yang diinginkan */
+            margin: 0 auto; /* Menengah halaman */
+            margin-top: -10px;
+        }
+
+        .patient-status p {
+        margin: 0; /* Menghilangkan margin default pada <p> */
+        text-align: left; /* Pastikan teks rata kiri */
+        }
+
+        .patient-info p, .patient-status p {
+            margin: 5px 0; /* Konsisten margin antar paragraf */
+        }
+
+        .Tutup-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #00BCD4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .Tutup-button:hover {
+            background: #0097A7;
+        }
+
+        .scheduling-link {
+            display: block;
+            margin-top: 50px;
+            margin-left: 74px;
+            text-align: left;
+            color: #426c94;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Dashboard
+                    <i class="arrow-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <a href="#home">Home</a>
+                <a href="#" class="notification">
+                    <span>2</span>
+                    <img src="bell.png" alt="Notification Icon" class="bell-icon">
+                </a>
+                <img src="Profile.png" alt="User Icon" class="user-icon">
+            </div>
+        </div>
+    </header>
+    <style>
+    body {
+        margin: 10;
+        padding: 50;
+        font-family: sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        width: 500px;
+        background-color: #fff;
+        border-radius: 4%;
+        padding: 260px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .header h2 {
+        margin: 10;
+    }
+
+    .header .icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .header .icons .icon {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .rooms {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .room-type {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .room-type h3 {
+        margin-top: 0;
+    }
+
+    .rooms .room-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    .room-grid .room {
+        background-color: #ddd;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .room-grid .room:hover {
+        background-color: #ccc;
+    }
+
+    .room-grid .room.active {
+        background-color: #4087d3;
+        color: #f4f2f2;
+    }
+
+    .room-grid .room.active:hover {
+        background-color: #0069d9;
+    }
+
+    .room-grid .room.disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    .room-grid .room.disabled:hover {
+        background-color: #ddd;
+    }
+
+    .room-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .room-details .button {
+        background-color: #0c56a6;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .room-details .button:hover {
+        background-color: #92c3f6;
+    }
+</style>
+</head>
+<body>
+    <div class="container" id="ruangan-page">
+        <div class="card">
+            <div class="header">
+                <h1>Pemilihan Ruangan</h1>
+                <div class="icons">
+                    <i class="icon fa fa-bell"></i>
+                    <i class="icon fa fa-user"></i>
+                </div>
+            </div>
+            <div class="rooms">
+                <div class="room-type">
+                    <h3>Standard</h3>
+                    <div class="room-grid">
+                        <div class="room active" data-room-id="101">101</div>
+                        <div class="room active" data-room-id="102">102</div>
+                        <div class="room active" data-room-id="103">103</div>
+                        <div class="room active" data-room-id="104">104</div>
+                        <div class="room active" data-room-id="105">105</div>
+                        <div class="room active" data-room-id="106">106</div>
+                        <div class="room active" data-room-id="107">107</div>
+                        <div class="room active" data-room-id="108">108</div>
+                        <div class="room active" data-room-id="109">109</div>
+                        <div class="room active" data-room-id="110">110</div>
+                    </div>
+                    <h4>Superior</h4>
+                    <div class="room-grid">
+                        <div class="room active" data-room-id="121">121</div>
+                        <div class="room active" data-room-id="122">122</div>
+                        <div class="room active" data-room-id="123">123</div>
+                        <div class="room active" data-room-id="124">124</div>
+                        <div class="room active" data-room-id="125">125</div>
+                        <div class="room active" data-room-id="126">126</div>
+                        <div class="room active" data-room-id="127">127</div>
+                        <div class="room active" data-room-id="128">128</div>
+                        <div class="room active" data-room-id="129">129</div>
+                        <div class="room active" data-room-id="130">130</div>
+                    </div>
+                    <h4>Deluxe</h4>
+                    <div class="room-grid">
+                        <div class="room active" data-room-id="141">141</div>
+                        <div class="room active" data-room-id="142">142</div>
+                        <div class="room active" data-room-id="143">143</div>
+                        <div class="room active" data-room-id="144">144</div>
+                        <div class="room active" data-room-id="145">145</div>
+                        <div class="room active" data-room-id="146">146</div>
+                        <div class="room active" data-room-id="147">147</div>
+                        <div class="room active" data-room-id="148">148</div>
+                        <div class="room active" data-room-id="149">149</div>
+                        <div class="room active" data-room-id="150">150</div>
+                    </div>
+                </div>
+                <div class="room-type">
+                    <h3>Executive</h3>
+                    <div class="room-grid">
+                        <div class="room active" data-room-id="161">161</div>
+                        <div class="room active" data-room-id="162">162</div>
+                        <div class="room active" data-room-id="163">163</div>
+                        <div class="room active" data-room-id="164">164</div>
+                        <div class="room active" data-room-id="165">165</div>
+                        <div class="room active" data-room-id="166">166</div>
+                        <div class="room active" data-room-id="167">167</div>
+                        <div class="room active" data-room-id="168">168</div>
+                        <div class="room active" data-room-id="169">169</div>
+                        <div class="room active" data-room-id="170">170</div>
+                    </div>
+                    <h4>Super Vip</h4>
+                    <div class="room-grid">
+                        <div class="room active" data-room-id="181">181</div>
+                        <div class="room active" data-room-id="182">182</div>
+                        <div class="room active" data-room-id="183">183</div>
+                        <div class="room active" data-room-id="184">184</div>
+                        <div class="room active" data-room-id="185">185</div>
+                        <div class="room active" data-room-id="186">186</div>
+                        <div class="room active" data-room-id="187">187</div>
+                        <div class="room active" data-room-id="188">188</div>
+                        <div class="room active" data-room-id="189">189</div>
+                        <div class="room active" data-room-id="190">190</div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-details">
+                <button class="button" onclick="showRoomDetails()">Data Fasilitas Tiap Ruangan</button>
+            </div>
+            <button class="button" onclick="closeRoomDetails()">Tutup</button>
+        </div>
+    </div>
+    <script>
+        function showRoomDetails() {
+            // Implement your logic to display room details based on the selected room
+            alert("Show Room Details");
+            window.location.href = "fasilitasRs.html";
+        }
+
+        function closeRoomDetails() {
+            // Implement your logic to close the room details section
+            alert("Close Room Details");
+            window.location.href = "dashboard.html";
+        }
+    </script>
+</body>
+</html>

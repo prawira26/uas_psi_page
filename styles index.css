@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* header navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e5e7eb; /* Light grey background */
+    padding: 13px 26px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar .login-button {
+    position: relative;
+    margin-left: 10px;
+}
+
+.navbar .login-button a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #00aaff; /* Blue background */
+    padding: 10px 40px;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -145px; /* Adjust this value to move the dropdown menu to the left */
+    background-color: #00aaff; /* Match the login button background color */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 3px 20px; /* Padding for top and bottom */
+    white-space: nowrap; /* Prevent wrapping */
+    border-radius: 100px;
+    margin-top: 0px;
+}
+
+.dropdown-content a {
+    color: white; /* Match the login button text color */
+    padding: 10px 20px; /* Adjust padding to match login button */
+    text-decoration: none;
+    display: inline-block; /* Display inline-block to allow side-by-side layout */
+    background-color: #00aaff;
+    border-radius: 100px; /* Match button shape */
+}
+
+.dropdown-content a:hover {
+    background-color: #008ccc; /* Slightly darker blue on hover */
+}
+
+.navbar .login-button:hover .dropdown-content {
+    display: flex; /* Display flex to align items horizontally */
+    gap: 10px; /* Add gap between items */
+}
+/*end heading navbar*/
+
+.hero {
+    background-image: url('home.jpg');
+    background-color: rgba(241, 240, 240, 0.4); 
+    background-blend-mode: lighten; 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 16%;
+    width: 100%; 
+    height: 100vh; 
+    height: 390px;
+    display: flex;
+    align-items: flex-start;
+    color: #070707;
+    position: relative;
+    padding-left: 90px;
+    padding-right: 90px; 
+    padding-top: 60px; 
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #00aaff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.about {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.about p  {
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: 17px;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.Est p {
+    font-size: 11px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 300px;
+    text-align: center;
+}
+
+.ok-button {
+    background-color: #00aaff;
+    color: white;
+    padding: 3px 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}

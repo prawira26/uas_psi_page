@@ -1,0 +1,489 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('dashboard.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.dashboard-header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10 8px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown .dropbtn .arrow-down {
+    margin-left: 5px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section a {
+    margin-left: 35px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.notification {
+    position: relative;
+}
+
+.notification span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: rgb(243, 52, 52);
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14.2px;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.dashboard-main {
+    padding: 40px;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    grid-auto-rows: minmax(150px, auto); /* Tinggi minimum untuk setiap baris */
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    margin-left: 100px;
+    width: 300px;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-content h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.card-content .count {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.count {
+    margin-top: 20px;
+}
+
+.card img {
+    width: 48px;
+    height: 48px;
+}
+
+.bell-icon {
+    width: 24px; /* Sesuaikan ukuran yang diinginkan */
+    height: 24px;
+}
+
+.icon-menu {
+    margin-left: 280px;
+    margin-bottom: 13px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Perubahan Baru */
+.modal {
+    display: none; /* Modal tidak ditampilkan secara default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Warna latar belakang dengan sedikit transparansi */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Warna latar belakang modal */
+    margin: 5% auto; /* Margin atas dan bawah, dan otomatis untuk kiri dan kanan */
+    padding: 20px; /* Padding di dalam modal */
+    border: 1px solid #888; /* Border modal */
+    width: 60%; /* Lebar modal */
+    border-radius: 10px; /* Sudut border membulat */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Bayangan modal */
+}
+
+.modal-close {
+    color: #aaa; /* Warna tombol close */
+    float: right; /* Float tombol close ke kanan */
+    font-size: 28px; /* Ukuran font tombol close */
+    font-weight: bold; /* Ketebalan font tombol close */
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black; /* Warna tombol close saat dihover atau difokus */
+    text-decoration: none; /* Tidak ada garis bawah */
+    cursor: pointer; /* Kursor pointer saat dihover */
+}
+
+.patient-card {
+    display: flex; /* Flexbox untuk kartu pasien */
+    justify-content: space-between; /* Spasi antara elemen dalam kartu */
+    align-items: center; /* Vertikal align center */
+    background: #00BCD4; /* Warna latar belakang kartu pasien */
+    padding: 15px; /* Padding di dalam kartu */
+    border-radius: 10px; /* Sudut border membulat */
+    margin-bottom: 10px; /* Margin bawah untuk setiap kartu pasien */
+}
+
+.patient-info, .patient-status {
+    color: white; /* Warna teks di dalam kartu pasien */
+}
+
+.patient-status {
+    text-align: right; /* Teks status pasien rata kanan */
+}
+
+.ok-button {
+    display: block; /* Tampilkan sebagai block */
+    width: 100px; /* Lebar tombol */
+    margin: 20px auto; /* Margin atas-bawah 20px, kiri-kanan otomatis */
+    padding: 10px; /* Padding di dalam tombol */
+    background: #00BCD4; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Tidak ada border */
+    border-radius: 5px; /* Sudut border membulat */
+    cursor: pointer; /* Kursor pointer saat dihover */
+}
+
+.ok-button:hover {
+    background: #0097A7; /* Warna latar belakang tombol saat dihover */
+}
+
+
+/* Styles for doctor modal */
+.doctor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.doctor-item {
+    background: #00BCD4;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gaya Modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 1% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+}
+
+.modal-close {
+    color: #000000;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-container {
+    text-align: center; /* Center align the header */
+    margin-bottom: 10px; /* Space below the header */
+}
+
+.header-title {
+    font-size: 24px; /* Adjust font size */
+    color: #00BCD4; /* Color to match buttons */
+}
+
+.button-container {
+    margin-top: 10px; /* Increase this value to push the buttons further down */
+}
+
+.Dokter-button, .Jadwal-button, .Ruangan-button {
+    display: block;
+    width: 280px; /* Increased width */
+    margin: 10px ; /* Centered alignment */
+    padding: 15px; /* Adjusted padding for better spacing */
+    background: #00BCD4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px; 
+}
+
+.Dokter-button:hover, .Jadwal-button:hover, .Ruangan-button:hover {
+    background: #0097A7;
+}
+
+
+/* Gaya Dokter List */
+.doctor-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.doctor-option {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px;
+    margin: 4px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.doctor-option:hover {
+    background-color: #0097a7;
+}
+
+.doctor-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.doctor-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-name {
+    font-weight: bold;
+}
+
+.doctor-specialty {
+    color: #ffffffb3;
+}
+
+/* Gaya Tombol Tutup */
+button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+
+.button-group {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.Tutup-button, .Jadwalkan-button {
+    display: inline-block;
+    width: 100px; /* Adjust width */
+    margin: 5px;
+    padding: 10px;
+    background: #00BCD4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px; /* Adjust font size */
+}
+
+.Tutup-button:hover, .Jadwalkan-button:hover {
+    background: #0097A7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.patient-card {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+}
+.patient-info, .patient-status {
+    margin-bottom: 10px;
+}
+.scheduling-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

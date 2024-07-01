@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Rumah Sakit Karya Medika</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js" defer></script>
+    <script src="dummy.js"></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Dashboard
+                    <i class="arrow-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <a href="dashboard.html">Home</a>
+                <a href="#" class="notification">
+                    <span>2</span>
+                    <img src="bell.png" alt="Notification Icon" class="bell-icon">
+                </a>
+                <img src="Profile.png" alt="User Icon" class="user-icon">
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="dashboard-cards">
+            <div class="card" id="pendaftaran-link">
+                <div class="card-content">
+                    <h3>Registrasi Pasien</h3>
+                    <span class="count">1</span>
+                </div>
+                <img src="Pasien.png" alt="Registrasi Pasien Icon" class="icon-menu">
+            </div>
+            <div class="card" id="data-pasien">
+                <div class="card-content">
+                    <h3>Data Pasien</h3>
+                    <span class="count">1</span>
+                </div>
+                <img src="Data Pasien.png" alt="Data Pasien Icon" class="icon-menu">
+            </div>
+            <div class="card">
+                <div class="card-content" id="rekap-pasien">
+                    <h3>Data Rekap Pasien</h3>
+                    <span class="count">1</span>
+                </div>
+                <img src="Data Pasien.png" alt="Data Rekap Pasien Icon" class="icon-menu">
+            </div>
+            <div class="card" id="ruang-pasien">
+                <div class="card-content">
+                    <h3>Ruangan</h3>
+                    <span class="count">30</span>
+                </div>
+                <img src="Ruangan.png" alt="Ruangan Icon" class="icon-menu">
+            </div>
+            <div class="card" id="dokter-page">
+                <div class="card-content">
+                    <h3>Dokter</h3>
+                    <span class="count">40</span>
+                </div>
+                <img src="Doktor.png" alt="Dokter Icon" class="icon-menu">
+            </div>
+            <div class="card">
+                <div class="card-content" id="keuangan-page">
+                    <h3>Keuangan</h3>
+                    <span class="count">1</span>
+                </div>
+                <img src="Data Pasien.png" alt="Keuangan Icon" class="icon-menu">
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal untuk Registrasi Pasien -->
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Registrasi Pasien</h2>
+            <div class="patient-card">
+                <span class="patient-number">1</span>
+                <div class="patient-info">
+                    <p>Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Apriyana Prawira Suradi</p>
+                    <p>No Telpon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 085797586745</p>
+                    <p>Alamat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Bandung, Arjasari Banjaran</p>
+                    <p>Keluhan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: pilek</p>
+                    <p>Riwayat Penyakit&nbsp;&nbsp;: -</p>
+                </div>
+                <div class="patient-status">
+                    <p>Status   : Pasien Lama</p>
+                    <p>Sudah Melakukan Pembayaran</p>
+                    <div>
+                    <a href="#" class="scheduling-link">klik untuk penjadwalan</a>
+                </div>
+                </div>
+            </div>
+            <div class="patient-card">
+                <span class="patient-number">2</span>
+                <div class="patient-info">
+                    <p>Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Azka Haikal Tuqou</p>
+                    <p>No Telpon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 081213570619</p>
+                    <p>Alamat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Bandung</p>
+                    <p>Keluhan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Pilek</p>
+                    <p>Riwayat Penyakit&nbsp;&nbsp;: -</p>
+                </div>
+                <div class="patient-status">
+                    <p>Status   : Pasien Baru</p>
+                    <p>Belum Melakukan Pembayaran</p>
+                    <div>
+                    <a href="#" class="scheduling-link">klik untuk penjadwalan</a>
+                </div>
+                </div>
+            </div>
+            <div class="patient-card">
+                <span class="patient-number">3</span>
+                <div class="patient-info">
+                    <p>Nama &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Syaila Mawaddah Sahda</p>
+                    <p>No Telpon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 085659980485</p>
+                    <p>Alamat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Cilacap</p>
+                    <p>Keluhan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: pilek</p>
+                    <p>Riwayat Penyakit&nbsp;&nbsp;: -</p>
+                </div>
+                <div class="patient-status">
+                    <p>Status   : Pasien Baru</p>
+                    <p>Sudah Melakukan Pembayaran</p>
+                    <div>
+                    <a href="#" class="scheduling-link">klik untuk penjadwalan</a>
+                </div>
+                </div>
+            </div>
+            <button class="Tutup-button" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+<!-- Modal untuk Penjadwalan -->
+<div id="scheduling-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2>Penjadwalan Pasien</h2>
+        <div id="scheduling-content">
+            <!-- Konten penjadwalan akan diisi oleh JavaScript -->
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Modal untuk Dokter -->
+    <div id="doctor-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="header-container">
+                <h2 class="header-title">Dokter</h2>
+            </div>
+            <div class="doctor-list">
+                <div class="doctor-option">
+                    <img src="Doktor.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Dr. Khalid Bassalamah S.Ked</span>
+                        <span class="doctor-specialty">Dokter Umum</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="Doktor.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Dr. Djaya Kusumo Sp.A</span>
+                        <span class="doctor-specialty">Dokter Umum</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="Doktor.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Dr. Isti Sarinah S.K.G</span>
+                        <span class="doctor-specialty">Dokter Umum</span>
+                    </div>
+                </div>
+            </div>
+            <button id="close-doctor-modal" class="modal-close">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Modal untuk Jadwal -->
+    <div id="Jadwal-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="header-container">
+                <h2 class="header-title">Jadwal</h2>
+            </div>
+            <div class="doctor-list">
+                <div class="doctor-option">
+                    <img src="bell.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Senin</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="bell.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Selasa</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="bell.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Rabu</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="bell.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Kamis</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="bell.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Jumat</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="bell.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Sabtu</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="bell.png" alt="Doctor" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Minggu</span>
+                    </div>
+                </div>
+            </div>
+            <button id="close-doctor-modal" class="modal-close">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Modal untuk Ruangan -->
+    <div id="Ruangan-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="header-container">
+                <h2 class="header-title">Ruangan</h2>
+            </div>
+            <div class="doctor-list">
+                <div class="doctor-option">
+                    <img src="Ruangan.png" alt="Ruangan" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Tipe Super VIP</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="Ruangan.png" alt="Ruangan" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Tipe Executive</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="Ruangan.png" alt="Ruangan" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Tipe Deluxe</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="Ruangan.png" alt="Ruangan" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Tipe Superior</span>
+                    </div>
+                </div>
+                <div class="doctor-option">
+                    <img src="Ruangan.png" alt="Ruangan" class="doctor-image">
+                    <div class="doctor-details">
+                        <span class="doctor-name">Tipe Standard</span>
+                    </div>
+                </div>
+            </div>
+            <button id="close-doctor-modal" class="modal-close">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript untuk mengelola modal
+        document.querySelectorAll('.modal-close').forEach(btn => {
+            btn.onclick = () => {
+                btn.closest('.modal').style.display = 'none';
+            };
+        });
+
+        // Menampilkan modal Registrasi Pasien
+        document.querySelector('#data-pasien').onclick = () => {
+            document.querySelector('#data-pasien').style.display = 'block';
+            window.location.href = "DataPasien.html";
+
+        };
+
+        // Menampilkan modal Registrasi Pasien
+        document.querySelector('#pendaftaran-link').onclick = () => {
+            document.querySelector('#notification-modal').style.display = 'block';
+        };
+
+        // Menampilkan modal Penjadwalan Pasien
+        document.querySelectorAll('.scheduling-link').forEach(link => {
+            link.onclick = (event) => {
+                event.preventDefault();
+                document.querySelector('#scheduling-modal').style.display = 'block';
+            };
+        });
+
+        // Fungsi untuk menutup modal
+        function closeModal() {
+            document.querySelector('#notification-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

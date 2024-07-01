@@ -1,0 +1,165 @@
+/* Dashboard Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('Aset_gambar/Join\ US.jpg') ;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/*navbar*/
+
+.dashboard-header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10 8px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -145px; /* Adjust this value to move the dropdown menu to the left */
+    background-color: #00aaff; /* Match the login button background color */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 1100px;
+    padding: 3px 20px; /* Padding for top and bottom */
+    white-space: nowrap; /* Prevent wrapping */
+    border-radius: 100px;
+    margin-top: 0px;
+}
+
+.dropdown-content a {
+    color: white; /* Match the login button text color */
+    padding: 10px 20px; /* Adjust padding to match login button */
+    text-decoration: none;
+    display: inline-block; /* Display inline-block to allow side-by-side layout */
+    background-color: #00aaff;
+    border-radius: 100px; /* Match button shape */
+}
+
+.dropdown-content a:hover {
+    background-color: #008ccc; /* Slightly darker blue on hover */
+}
+
+.navbar .login-button:hover .dropdown-content {
+    display: flex; /* Display flex to align items horizontally */
+    gap: 10px; /* Add gap between items */
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section a {
+    margin-left: 35px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.notification {
+    position: relative;
+}
+
+.notification span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: rgb(243, 52, 52);
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14.2px;
+    display: none;
+}
+.notification span.show {
+    display: inline; /* Tampilkan ketika ada notifikasi */
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.bell-icon {
+    width: 24px; /* Sesuaikan ukuran yang diinginkan */
+    height: 24px;
+}
+
+.show {
+    display: flex; /* Display flex to align items horizontally */
+    gap: 10px; /* Add gap between items */
+}
+/*end of navbar*/
+
+/*form border*/
+.form-border {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+}
+
+.form-input {
+    margin-bottom: 20px;
+}
+
+.form-input label {
+    display: block;
+    margin-bottom: -15px;
+}
+
+.form-input input, .form-input select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.btn-daftar {
+    background-color: #008ccc;
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin-left: 95px;
+    border: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.btn-konfirmasi {
+    background-color: #008ccc;
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin-left: 95px;
+    border: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+

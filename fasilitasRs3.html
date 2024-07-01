@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FasilitasRS2</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <style>
+        .patient-card {
+            position: relative; /* Untuk posisi absolut nomor pasien */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
+            background: #00BCD4;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .patient-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background: #0097A7;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .patient-info {
+            text-align: left;
+            margin-left: 40px; /* Jarak untuk nomor */
+            flex-grow: 1; /* Agar mengambil ruang kosong */
+        }
+
+        .patient-status {
+            background: #00BCD4;
+            padding: 10px;
+            color: white;
+            width: 225px; /* Sesuaikan dengan lebar yang diinginkan */
+            margin: 0 auto; /* Menengah halaman */
+            margin-top: -10px;
+        }
+
+        .patient-status p {
+        margin: 0; /* Menghilangkan margin default pada <p> */
+        text-align: left; /* Pastikan teks rata kiri */
+        }
+
+        .patient-info p, .patient-status p {
+            margin: 5px 0; /* Konsisten margin antar paragraf */
+        }
+
+        .Tutup-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #00BCD4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .Tutup-button:hover {
+            background: #0097A7;
+        }
+
+        .scheduling-link {
+            display: block;
+            margin-top: 50px;
+            margin-left: 74px;
+            text-align: left;
+            color: #426c94;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Dashboard
+                    <i class="arrow-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <a href="#home">Home</a>
+                <a href="#" class="notification">
+                    <span>2</span>
+                    <img src="bell.png" alt="Notification Icon" class="bell-icon">
+                </a>
+                <img src="Profile.png" alt="User Icon" class="user-icon">
+            </div>
+        </div>
+    </header>
+
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f0f0f0;
+                    margin: 0;
+                    padding: 20px;
+                }
+                .container {
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 20px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+                .room-info {
+                    background-color: #e0e0e0;
+                    border-radius: 5px;
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .room-details {
+                    flex: 1;
+                }
+                .room-image {
+                    width: 200px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+                .button-group {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 10px;
+                }
+                .btn {
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                .btn-back {
+                    background-color: #ff9999;
+                }
+                .btn-next, .btn-close {
+                    background-color: #00BFFF;
+                    color: white;
+                }
+            </style>
+        </head>
+        <body>
+                <h3>Rawat inap</h3>
+        
+                <div class="room-info">
+                    <div class="room-details">
+                        <h4>Super VIP</h4>
+                        <p>Standard ini dilengkapi AC dan TV Kabel</p>
+                        <p>Room Facilities :</p>
+                        <ol>
+                            <li>Hospital Bed Electric</li>
+                            <li>Bed Site Cabinet</li>
+                            <li>Over Bed Table</li>
+                            <li>TV 32 Inch + 107 Channel</li>
+                            <li>1 Kamar 1 Pasien</li>
+                        </ol>
+                    </div>
+                    <img src="Deluxe.png" alt="Standard Room" class="room-image">
+                </div>
+        
+
+                <div class="button-group">
+                    <a href="fasilitasRs2.html"><button class="btn btn-back">Back</button></a>
+                    <a href="Ruangpasien.html"><button class="btn btn-close">Tutup</button></a>
+                </div>
+            </div>
+        </body>
+        </html>
+</body>
+</html>

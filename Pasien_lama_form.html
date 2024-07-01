@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pasien Lama</title>
+    <link rel="stylesheet" href="Pasien_lama_form.css">
+    <script src="Pasien_lama_form.js"></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="navbar">
+            <a href="Pasien_Baru.html"><div class="logo">Rumah Sakit Karya Medika</div></a>
+            <div class="right-section">
+                <a href="Pasien_Baru.html">Home</a>
+                <div class="dropdown">
+                    <a href="#pendaftaran" id="pendaftaran-link">Pendaftaran</a>
+                    <div id="pendaftaran-dropdown" class="dropdown-content">
+                        <a href="Pasien_Baru_Form.html" class="left">Pasien Baru</a>
+                        <a href="Pasien_lama_form.html" class="right">Pasien Lama</a>
+                    </div>
+                </div>
+                <a href="#" class="notification" id="notification-toggle">
+                    <span>0</span>
+                    <img src="Aset_gambar/Bell Notif.png" alt="Notification Icon" class="bell-icon">
+                    <div id="notification-dropdown" class="notification-dropdown">
+                        <!-- Daftar notifikasi akan ditambahkan di sini -->
+                    </div>
+                </a>
+                <img src="Aset_gambar/Profile.png" alt="User Icon" class="user-icon">
+            </div>
+        </div>
+    </header>
+    <div class="data+keluhan">
+        <div class="border-data">
+            <header class="title">Data Pasien</header>
+            <div id="data-output">
+                <!-- akan terlampir data dari pasien baru -->
+            </div>
+            <button type="button" id="button-kembali" class="btn-kembali">Kembali</button>
+            <button class="btn-daftarlagi">Daftar Lagi</button>
+            </div>
+        
+        <div class="border-keluhan">
+            <header class="title-keluhan">Keluhan</header><br>
+            <input type="text" id="inputText" class="input-keluhan" placeholder="keluhan anda">
+            <br>
+            <h3>Pilih Dokter Spesialis</h3>
+            <select id="pilih-dokter" name="pilih-dokter">
+                <option value="umum">Dokter Umum</option>
+                <option value="bedah-dalam">Dokter Bedah Dalam</option>
+                <option value="gigi">Dokter Gigi</option>
+            </select><br>
+            <button class="btn-daftar" id="btn-daftar">daftar</button>
+            <button class="btn-konfirmasi" id="btn-konfirmasi">Konfirmasi</button>
+        </div>
+    </div>
+</body>
+</html>

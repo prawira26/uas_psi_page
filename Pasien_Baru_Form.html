@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit Karya Medika</title>
+    <script src="Pasien_Baru_Form.js" defer></script>
+    <link rel="stylesheet" href="Pasien_Baru_Form.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="navbar">
+            <a href="Pasien_Baru.html"><div class="logo">Rumah Sakit Karya Medika</div></a>
+            <div class="right-section">
+                <a href="Pasien_Baru.html">Home</a>
+                <div class="dropdown">
+                    <a href="#pendaftaran" id="pendaftaran-link">Pendaftaran</a>
+                    <div id="pendaftaran-dropdown" class="dropdown-content">
+                        <a href="Pasien_Baru_Form.html" class="left">Pasien Baru</a>
+                        <a href="Pasien_lama_form.html" class="right">Pasien Lama</a>
+                    </div>
+                </div>
+                <a href="#" class="notification">
+                    <span>2</span>
+                    <img src="Aset_gambar/Bell Notif.png" alt="Notification Icon" class="bell-icon">
+                </a>
+                <img src="Aset_gambar/Profile.png" alt="User Icon" class="user-icon">
+            </div>
+        </div>
+    </header>
+    <div class="form-border">
+        <form id="form-pendaftaran">
+            <div class="form-input">
+                <label for="nama-pasien">Nama Pasien</label><br>
+                <input type="text" id="nama-pasien" name="nama-pasien"><br>
+            </div>
+            <div class="form-input">
+                <label for="nomor-telepon">Nomor Telepon</label><br>
+                <input type="text" id="nomor-telepon" name="nomor-telepon"><br>
+            </div>
+            <div class="form-input">
+                <label for="usia">Usia</label><br>
+                <input type="text" id="usia" name="usia"><br>
+            </div>
+            <div class="form-input">
+                <label for="alamat">Alamat</label><br>
+                <input type="text" id="alamat" name="alamat"><br>
+            </div>
+            <div class="form-input">
+                <label for="riwayat-penyakit">Riwayat Penyakit</label><br>
+                <input type="text" id="riwayat-penyakit" name="riwayat-penyakit"><br>
+            </div>
+            <div class="form-input">
+                <label for="keluhan">Keluhan</label><br>
+                <input type="text" id="keluhan" name="keluhan"><br>
+            </div>
+            <div class="form-input">
+                <label for="pilih-dokter">Pilih Dokter</label><br>
+                <select id="pilih-dokter" name="pilih-dokter">
+                    <option value="umum">Dokter Umum</option>
+                    <option value="bedah-dalam">Dokter Bedah Dalam</option>
+                    <option value="gigi">Dokter Gigi</option>
+                </select><br>
+            </div>
+            <button type="button" id="btn-daftar" class="btn-daftar">Daftar</button>
+        </form>
+        <div id="output"></div>
+    </div>
+</body>
+</html>

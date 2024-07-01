@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pasien_baru.css">
+    <script src="pasien_baru.js" defer></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="navbar">
+            <a href="index.html"><div class="logo">Rumah Sakit Karya Medika</div></a>
+            <div class="right-section">
+                <a href="Pasien_Baru.html">Home</a>
+                <div class="dropdown">
+                    <a href="#pendaftaran" id="pendaftaran-link">Pendaftaran</a>
+                    <div id="pendaftaran-dropdown" class="dropdown-content">
+                        <a href="Pasien_Baru_Form.html" class="left">Pasien Baru</a>
+                        <a href="Pasien_lama_form.html" class="right">Pasien Lama</a>
+                    </div>
+                </div>
+                <div class="notification">
+                    <span id="notification-count">2</span>
+                    <img src="Aset_gambar/Bell Notif.png" alt="Notification Icon" class="bell-icon">
+                </div>
+                
+                <img src="Aset_gambar/Profile.png" alt="User Icon" class="user-icon">
+            </div>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>SELAMAT DATANG</h1>
+            <p>Sistem Pendaftaran Pasien di Rumah Sakit Karya Medika</p>
+            <button class="cta-button" id="ctabutton">Daftar Sekarang</button>
+        </div>
+    </section>
+    <section class="about">
+        <p>Tentang</p>
+        <p>
+            Rumah Sakit Karya Medika ini berdiri pada tahun 2011 pada bulan agustus, didirikan oleh Prof. Yusril Ilyas.
+            Rumah Sakit ini beroperasi di daerah Bandung Kota. Hingga sekarang rumah sakit ini aktif beroprasi dalam
+            pengobatan. Karya Medika juga aktif dalam berbagai macam acara sebagai media partner, contohnya seperti
+            acara Donor Darah Mahasiswa, Pelatihan Pertolongan Kesehatan yang dilakukan di kampus uninUs.
+            Rumah sakit Karya Medika memiliki alat yang canggih untuk pengobatan.
+        </p>
+    </section>
+    <footer>
+        <section class="Est">
+        <p>Est. 2024</p>
+        </section>
+    </footer>
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <p>Anda belum melakukan login pasien</p>
+            <p>Mohon login terlebih dahulu untuk melanjutkan pendaftaran</p>
+            <button class="ok-button">OK</button>
+        </div>
+    </div>
+</body>
+</html>
